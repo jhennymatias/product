@@ -19,5 +19,5 @@ const Product = mongoose.model('Product');
 // aceitas todas as requisições
 app.use('/', require('./src/routes'));
 
-app.listen(3001)
+app.listen(3002)
 

@@ -1,16 +1,17 @@
-import React from 'react';
-import Header from './components/header'
-import './style.css'
-import Main from './pages/main'
-import { render } from 'react-dom';
+import React, {Component} from 'react';
+import Routes from './routes';
 
-function App() {
-  return (
+import './style.css';
+
+import Header from './components/header';
+import Main from './pages/main';
+
+
+const App = () => (
     <div className="App">
-      <Header/>
-      <Main/>
+      <Header />
+      <Routes />
     </div>
   );
-}
 
 export default App;
