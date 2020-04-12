@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import api from '../../services/api';
 import './style.css';
+import {Link} from 'react-router-dom';
 export default class Main extends Component{
     state ={
         products: [],
@@ -35,11 +36,11 @@ export default class Main extends Component{
         return(
             <div className="product-list">
                 {products.map(product =>(
-                <article key={product._id}>
+                <article key={product.id}>
                     <strong>{product.title}</strong>
                     <p>{product.description}</p>                  
                     <p>{product.url}</p>
-                    <a href="">Acessar</a>
+                    <Link to={`/detalhes/${product._id}`}>Acessar</Link>
                 </article>
                 ))}
                 <div className="actions">
